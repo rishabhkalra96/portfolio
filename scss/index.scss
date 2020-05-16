@@ -1,0 +1,146 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+}
+
+body {
+    background-image: url('./../assets/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.scene, .scene-4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .introDiv {
+        flex: 1;
+        text-align: center;
+        .intro-text {
+            color: white;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            font-weight: 300;
+            margin: 0;
+        }
+        .intro-sub {
+            font-size: 2rem;
+            margin: 0;
+            color: white;
+            margin-top: 60px;
+        }
+        .scrollDownContainer {
+            margin-top: 100px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            #scrolldown {
+                font-size: 2rem;
+                outline: none;
+                min-width: 100px;
+                height: 90px;
+                background-color: transparent;
+                color: whitesmoke;
+                opacity: 0.8;
+                border-radius: 0;
+                border-color: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.scene-4 {
+    .cards-container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        margin-top: 80px;
+        .card {
+            position: relative;
+            margin: auto;
+            color: white;
+            width: 100%;
+            height: 300px;
+            background-color: white;
+            box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+            .image-container {
+                width: 100%;
+                height: 100%;
+                padding-top: 20%;
+                img {
+                    max-width: 100%;
+                    max-height: 43%;
+                }
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: 0.5s;
+                z-index: 1;
+                background-color:#4CAF50;
+            }
+            .card-name {
+                display: none;
+            }
+            &:hover {
+                cursor: pointer;
+                .overlay {
+                    opacity: 0.8;
+                    display: flex;
+                    align-items: flex-end;
+                    .card-name {
+                        display: block;
+                        color: white;
+                        font-size: 1.8rem;
+                        width: 100%;
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 930px) {
+    .scene-4 {
+        .cards-container {
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .scene-4 {
+        .cards-container {
+            grid-template-columns: repeat(1, 1fr);
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
