@@ -11,3 +11,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
           });
     });
 });
+
+function redirectToPage(redirectLink) {
+    console.log('opening new page at ', redirectLink);
+    if (redirectLink) {
+        window.open(redirectLink, '_blank');
+    }
+}
