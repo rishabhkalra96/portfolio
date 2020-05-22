@@ -18,3 +18,11 @@ function redirectToPage(redirectLink) {
         window.open(redirectLink, '_blank');
     }
 }
+
+function scrollToView(id) {
+    try {
+        document.getElementById(id).scrollIntoView();
+    } catch (e) {
+        console.warn('captured error while scrolling ', e);
+    }
+}

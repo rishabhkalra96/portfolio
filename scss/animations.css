@@ -1,0 +1,62 @@
+@-webkit-keyframes slowBounce {
+  0% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(0) translateY(25%);
+            transform: rotate(0) translateY(25%);
+  }
+  99% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+}
+
+@keyframes slowBounce {
+  0% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(0) translateY(25%);
+            transform: rotate(0) translateY(25%);
+  }
+  99% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+}
+
+.slowBounceAnimation {
+  -webkit-animation: slowBounce 3s infinite 0s linear;
+          animation: slowBounce 3s infinite 0s linear;
+}
+
+@-webkit-keyframes slide-down-fast {
+  0% {
+    -webkit-transform: rotate(0) translateY(-200%);
+            transform: rotate(0) translateY(-200%);
+  }
+  98% {
+    -webkit-transform: rotate(0) translateY(0%);
+            transform: rotate(0) translateY(0%);
+  }
+}
+
+@keyframes slide-down-fast {
+  0% {
+    -webkit-transform: rotate(0) translateY(-200%);
+            transform: rotate(0) translateY(-200%);
+  }
+  98% {
+    -webkit-transform: rotate(0) translateY(0%);
+            transform: rotate(0) translateY(0%);
+  }
+}
+
+.slide-down-fast-animate {
+  -webkit-animation: slide-down-fast 0.6s forwards 0.3s linear;
+          animation: slide-down-fast 0.6s forwards 0.3s linear;
+}
+/*# sourceMappingURL=animations.css.map */

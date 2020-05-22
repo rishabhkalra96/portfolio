@@ -1,8 +1,71 @@
+@-webkit-keyframes slowBounce {
+  0% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(0) translateY(25%);
+            transform: rotate(0) translateY(25%);
+  }
+  99% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+}
+
+@keyframes slowBounce {
+  0% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(0) translateY(25%);
+            transform: rotate(0) translateY(25%);
+  }
+  99% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+  }
+}
+
+.slowBounceAnimation {
+  -webkit-animation: slowBounce 3s infinite 0s linear;
+          animation: slowBounce 3s infinite 0s linear;
+}
+
+@-webkit-keyframes slide-down-fast {
+  0% {
+    -webkit-transform: rotate(0) translateY(-200%);
+            transform: rotate(0) translateY(-200%);
+  }
+  98% {
+    -webkit-transform: rotate(0) translateY(0%);
+            transform: rotate(0) translateY(0%);
+  }
+}
+
+@keyframes slide-down-fast {
+  0% {
+    -webkit-transform: rotate(0) translateY(-200%);
+            transform: rotate(0) translateY(-200%);
+  }
+  98% {
+    -webkit-transform: rotate(0) translateY(0%);
+            transform: rotate(0) translateY(0%);
+  }
+}
+
+.slide-down-fast-animate {
+  -webkit-animation: slide-down-fast 0.6s forwards 0.3s linear;
+          animation: slide-down-fast 0.6s forwards 0.3s linear;
+}
+
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: montserrat;
 }
 
@@ -23,6 +86,55 @@ body::-webkit-scrollbar-thumb {
   background-color: black;
   outline: 1px solid black;
   border-radius: 5px;
+}
+
+.navbar-container {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 2;
+  height: 80px;
+}
+
+.navbar-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: 100%;
+  background-color: black;
+  margin: auto;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+}
+
+.navbar-container .navbar .navbar-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 30%;
+  height: 100%;
+  color: white;
+  margin: auto;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-container .navbar .navbar-item:active, .navbar-container .navbar .navbar-item:focus, .navbar-container .navbar .navbar-item:hover {
+  background-color: #4CAF50;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar-container .navbar .navbar-item .item-text {
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 .scene, .scene-4 {
@@ -79,6 +191,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0;
   border-color: transparent;
   cursor: pointer;
+}
+
+.scene .introDiv .scrollDownContainer #scrolldown:hover, .scene-4 .introDiv .scrollDownContainer #scrolldown:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: black;
+  color: #4CAF50;
+  padding: 6px 15px;
+  border-radius: 5px;
 }
 
 .scene-4 .cards-container {
